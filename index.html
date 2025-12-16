@@ -1,26 +1,30 @@
-<!-- Обновленный HTML для команды - вставьте в существующий файл index.html -->
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IT-отдел колледжа - Портфолио</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Code+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <script src = 'script.js'></script>
 </head>
+
 <body>
     <!-- Навигация -->
     <header class="header">
         <nav class="navbar">
             <div class="container">
-                <a href="#" class="logo">IT-Отдел Колледжа</a>
+                <a href="#" class="logo">IT-ОТДЕЛ</a>
                 <ul class="nav-links">
                     <li><a href="#home">Главная</a></li>
                     <li><a href="#team">Команда</a></li>
                     <li><a href="#skills">Навыки</a></li>
+                    <li><a href="#stats">Статистика</a></li>
+                    <li><a href="#projects">Проекты</a></li>
                     <li><a href="#contact">Контакты</a></li>
                 </ul>
                 <div class="menu-toggle">
@@ -30,12 +34,33 @@
         </nav>
     </header>
 
+    <!-- Индикатор секций -->
+    <div class="section-indicator">
+        <div class="indicator-dot active" data-section="home" data-tooltip="Главная"></div>
+        <div class="indicator-dot" data-section="team" data-tooltip="Команда"></div>
+        <div class="indicator-dot" data-section="skills" data-tooltip="Навыки"></div>
+        <div class="indicator-dot" data-section="stats" data-tooltip="Статистика"></div>
+        <div class="indicator-dot" data-section="projects" data-tooltip="Проекты"></div>
+        <div class="indicator-dot" data-section="contact" data-tooltip="Контакты"></div>
+    </div>
+
+    <!-- Плавающие формы -->
+    <div class="floating-shape floating-shape-1"></div>
+    <div class="floating-shape floating-shape-2"></div>
+    <div class="floating-shape floating-shape-3"></div>
+
     <!-- Главный баннер -->
     <section id="home" class="hero">
         <div class="container">
             <h1>IT-отдел колледжа</h1>
-            <p>Мы создаем инновационные решения для современного образования</p>
-            <a href="#team" class="btn">Посмотреть участников</a>
+            <p class="section-description">Создаем будущее образования с помощью современных технологий и инновационных
+                решений</p>
+            <a href="#team" class="btn">Исследовать команду</a>
+
+            <div class="scroll-hint">
+                <span>Прокрутите вниз</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
         </div>
     </section>
 
@@ -43,83 +68,113 @@
     <section id="team" class="team">
         <div class="container">
             <h2>Наша команда</h2>
-            <p class="section-description">Профессионалы в области разработки, дизайна и IT-технологий</p>
-            
-            <!-- Фильтр по ролям -->
-            <div class="role-filter">
-                <button class="filter-btn active" data-filter="all">Все</button>
-            </div>
-            
-            <!-- Панель с фото и именами -->
+            <p class="section-description">Творческие профессионалы, объединенные страстью к технологиям и инновациям
+            </p>
+
+            <!-- Панель руководства -->
             <div class="team-leadership">
                 <h3>Руководство отдела</h3>
                 <div class="leadership-grid">
-                    <div class="lead-member" data-role="backend">
+                    <div class="lead-member">
                         <div class="lead-avatar">
                             <div class="avatar-img">
-                                <span>СБ</span>
+                                <img src="images/team1.jpg" alt="Степан Белоглазов">
                             </div>
                         </div>
                         <h4>Степан Белоглазов</h4>
                         <p class="lead-role">JS-разработчик</p>
-                        <div class="lead-stats">
-                            <div class="stat">
-                                <i class="fas fa-code-branch"></i>
+                        <div class="tech-stack">
+                            <span class="tech-item">JavaScript</span>
+                            <span class="tech-item">React</span>
+                            <span class="tech-item">Node.js</span>
                         </div>
                     </div>
-                    
-                    <div class="lead-member" data-role="frontend">
+
+                    <div class="lead-member">
                         <div class="lead-avatar">
                             <div class="avatar-img">
-                                <span>АИ</span>
+                                <img src="images/team2.jpg" alt="Александр Сапрыкин">
                             </div>
                         </div>
                         <h4>Александр Сапрыкин</h4>
                         <p class="lead-role">Верстальщик</p>
+                        <div class="tech-stack">
+                            <span class="tech-item">HTML/CSS</span>
+                            <span class="tech-item">Figma</span>
+                            <span class="tech-item">UI/UX</span>
+                        </div>
                     </div>
-                    
-                    <div class="lead-member" data-role="fullstack">
+
+                    <div class="lead-member">
                         <div class="lead-avatar">
                             <div class="avatar-img">
-                                <span>ПС</span>
+                                <img src="images/team5.jpg" alt="Павел Лемтюгин">
                             </div>
                         </div>
                         <h4>Павел Лемтюгин</h4>
                         <p class="lead-role">Контент-менеджер</p>
+                        <div class="tech-stack">
+                            <span class="tech-item">Контент</span>
+                            <span class="tech-item">Аналитика</span>
+                            <span class="tech-item">SEO</span>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Основная команда -->
-            <div class="team-grid" id="teamMembers">
-                <!-- Участники команды будут добавлены динамически через JS -->
+
+            <!-- Блок с двумя фото -->
+            <div class="photo-gallery">
+                <h3>Рабочий процесс</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="photo-frame">
+                            <div class="photo-placeholder">
+                                <img src="images/project1.jpg" alt="Презентация проектов">
+                            </div>
+                        </div>
+                        <div class="photo-caption">
+                            <h4>Совместная разработка</h4>
+                            <p>Командная работа над сложными проектами</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="photo-frame">
+                            <div class="photo-placeholder">
+                                <img src="images/project2.jpg" alt="Презентация проектов">
+                            </div>
+                        </div>
+                        <div class="photo-caption">
+                            <h4>Презентация проектов</h4>
+                            <p>Демонстрация готовых решений</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <!-- Статистика команды -->
         </div>
     </section>
-
-    <!-- Проекты -->
 
     <!-- Навыки -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2>Технологии и навыки</h2>
+            <h2>Технологии</h2>
+            <p class="section-description">Современный стек технологий для создания инновационных решений</p>
+
             <div class="skills-container">
                 <div class="skill-category">
                     <h3>Фронтенд</h3>
                     <div class="skill-tags">
-                        <span>HTML</span>
+                        <span>HTML5</span>
                         <span>JavaScript</span>
-                        <span>CSS</span>
-
+                        <span>CSS3/SCSS</span>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3>Бэкенд</h3>
                     <div class="skill-tags">
+                        <span>Node.js</span>
                         <span>PHP</span>
+                        <span>Python</span>
+                        <span>MySQL</span>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -134,10 +189,87 @@
         </div>
     </section>
 
+    <!-- Статистика -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <h2>Наша статистика</h2>
+            <p class="section-description">Цифры, которые говорят о нашей работе и достижениях</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-count="15">0</div>
+                    <div class="stat-label">Завершенных проектов</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="3">0</div>
+                    <div class="stat-label">Лет опыта</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="100">0</div>
+                    <div class="stat-label">Довольных клиентов</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="5000">0</div>
+                    <div class="stat-label">Часов разработки</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Проекты -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2>Текущие проекты</h2>
+            <p class="section-description">Инновационные решения, над которыми мы работаем</p>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h4>Образовательная платформа</h4>
+                        <p>Разработка интерактивной платформы для дистанционного обучения с AI-ассистентом и аналитикой
+                            успеваемости.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h4>Мобильное приложение</h4>
+                        <p>Создание кроссплатформенного приложения для студентов и преподавателей с push-уведомлениями.
+                        </p>
+                        <div class="project-tech">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                            <span>Redux</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h4>Система аналитики</h4>
+                        <p>Внедрение системы сбора и анализа данных об успеваемости студентов с машинным обучением.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Контакты -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Свяжитесь с нами</h2>
+            <h2>Контакты</h2>
+            <p class="section-description">Свяжитесь с нами для обсуждения вашего проекта или сотрудничества</p>
+
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
@@ -169,7 +301,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="contact-form">
                     <h3>Отправить сообщение</h3>
                     <form id="messageForm">
@@ -182,13 +314,16 @@
                         <div class="form-group">
                             <textarea placeholder="Ваше сообщение" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn">Отправить</button>
+                        <button type="submit" class="btn">Отправить сообщение</button>
                     </form>
                 </div>
             </div>
-            
+
             <div class="social-links">
                 <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </section>
@@ -199,23 +334,28 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>IT-отдел колледжа</h3>
+                    <p>Создаем технологические решения для современного образования. Инновации, профессионализм и
+                        качество в каждом проекте.</p>
                 </div>
                 <div class="footer-section">
-                    <h3>Быстрые ссылки</h3>
+                    <h3>Навигация</h3>
                     <ul>
                         <li><a href="#home">Главная</a></li>
                         <li><a href="#team">Команда</a></li>
+                        <li><a href="#skills">Навыки</a></li>
+                        <li><a href="#stats">Статистика</a></li>
+                        <li><a href="#projects">Проекты</a></li>
                         <li><a href="#contact">Контакты</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 IT-отдел колледжа. Все права защищены.</p>
-                <p>Сайт создан с использованием современных веб-технологий</p>
+                <p>Минималистичный дизайн с использованием современных веб-технологий</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
 </body>
+
 </html>
