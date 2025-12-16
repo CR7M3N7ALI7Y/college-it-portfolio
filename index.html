@@ -1,0 +1,221 @@
+<!-- Обновленный HTML для команды - вставьте в существующий файл index.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT-отдел колледжа - Портфолио</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src = 'script.js'></script>
+</head>
+<body>
+    <!-- Навигация -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">IT-Отдел Колледжа</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#team">Команда</a></li>
+                    <li><a href="#skills">Навыки</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Главный баннер -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>IT-отдел колледжа</h1>
+            <p>Мы создаем инновационные решения для современного образования</p>
+            <a href="#team" class="btn">Посмотреть участников</a>
+        </div>
+    </section>
+
+    <!-- О команде -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2>Наша команда</h2>
+            <p class="section-description">Профессионалы в области разработки, дизайна и IT-технологий</p>
+            
+            <!-- Фильтр по ролям -->
+            <div class="role-filter">
+                <button class="filter-btn active" data-filter="all">Все</button>
+            </div>
+            
+            <!-- Панель с фото и именами -->
+            <div class="team-leadership">
+                <h3>Руководство отдела</h3>
+                <div class="leadership-grid">
+                    <div class="lead-member" data-role="backend">
+                        <div class="lead-avatar">
+                            <div class="avatar-img">
+                                <span>СП</span>
+                            </div>
+                        </div>
+                        <h4>Степан Белоглазов</h4>
+                        <p class="lead-role">JS-разработчик</p>
+                        <div class="lead-stats">
+                            <div class="stat">
+                                <i class="fas fa-code-branch"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="lead-member" data-role="frontend">
+                        <div class="lead-avatar">
+                            <div class="avatar-img">
+                                <span>АИ</span>
+                            </div>
+                        </div>
+                        <h4>Александр Сапрыкин</h4>
+                        <p class="lead-role">Верстальщик</p>
+                    </div>
+                    
+                    <div class="lead-member" data-role="fullstack">
+                        <div class="lead-avatar">
+                            <div class="avatar-img">
+                                <span>ПС</span>
+                            </div>
+                        </div>
+                        <h4>Павел Лемтюгин</h4>
+                        <p class="lead-role">Контент-менеджер</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Основная команда -->
+            <div class="team-grid" id="teamMembers">
+                <!-- Участники команды будут добавлены динамически через JS -->
+            </div>
+            
+            <!-- Статистика команды -->
+        </div>
+    </section>
+
+    <!-- Проекты -->
+
+    <!-- Навыки -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Технологии и навыки</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Фронтенд</h3>
+                    <div class="skill-tags">
+                        <span>HTML</span>
+                        <span>JavaScript</span>
+                        <span>CSS</span>
+
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Бэкенд</h3>
+                    <div class="skill-tags">
+                        <span>PHP</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Инструменты</h3>
+                    <div class="skill-tags">
+                        <span>Git</span>
+                        <span>Figma</span>
+                        <span>VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Свяжитесь с нами</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Адрес</h4>
+                            <p>г. Белоярский, квартал спортивный 1</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>btek@mail.ru</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Телефон</h4>
+                            <p>+7 (3467) 02 10 25</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Часы работы</h4>
+                            <p>Пн-Пт: 9:00 - 18:00</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Отправить сообщение</h3>
+                    <form id="messageForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Ваш email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Ваше сообщение" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Отправить</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>IT-отдел колледжа</h3>
+                </div>
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#team">Команда</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 IT-отдел колледжа. Все права защищены.</p>
+                <p>Сайт создан с использованием современных веб-технологий</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
